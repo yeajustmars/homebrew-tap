@@ -27,7 +27,7 @@ class Boilermaker < Formula
   end
 
   def install
-    bin.install Dir["*/boil"]
+    bin.install "boil"
   end
 
   test do
