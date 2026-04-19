@@ -3,28 +3,28 @@ class Boilermaker < Formula
   homepage "https://github.com/yeajustmars/boilermaker"
   license "MIT"
 
-  version "v0.1.0-beta17"
+  version "v0.1.0-beta18"
 
   on_arm do
     on_macos do
       url "https://github.com/yeajustmars/boilermaker/releases/download/#{version}/boilermaker-aarch64-apple-darwin.tar.xz"
-      sha256 "0d69992ed7b5c60b0f7d4304d0e0c7579c2fc8629fe75405120456ba92e9f8a3"
+      sha256 "16f671b966c06fa6c158bb1970eff597f6dd6f06469562830d34196b69215047"
     end
 
     on_linux do
       url "https://github.com/yeajustmars/boilermaker/releases/download/#{version}/boilermaker-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "87b660c8faceb3c39e940c5b24dbf17bc07892f522dade531f8a97602d3e678a"
+      sha256 "55ef90d624446bd490389c5654bd2cf58d3c57c74851394cfc1b323e15ab6e21"
     end
   end
 
   on_intel do
     on_macos do
       url "https://github.com/yeajustmars/boilermaker/releases/download/#{version}/boilermaker-x86_64-apple-darwin.tar.xz"
-      sha256 "66c06d89fcb9dc7200593444b456a66756ac8c8f8b5fbe013eed9676b2f6f4f7"
+      sha256 "a2d1e5ba0c8f3d73f615611f449a92e47e5fe567b41976a2921fc3ffc073f230"
     end
     on_linux do
       url "https://github.com/yeajustmars/boilermaker/releases/download/#{version}/boilermaker-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "828dcf8bd692e4096e9c53dd1f6be4309fac0f1fc3751cc6634e299a9fd70897"
+      sha256 "4994d24181d9a14599d441fac0721001b8f0a198a58e33e35281772d6436f100"
     end
   end
 
