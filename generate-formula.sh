@@ -1,17 +1,18 @@
 #!/bin/bash
 
-BMHB_LOGO=$(cat <<'BMHB_TEXT'
- ___      _ _                    _             _  _               _
+BLUE='\033[0;34m'
+NC='\033[0m'
+
+echo -e -n "${BLUE}"
+
+cat <<'BMHB_TEXT'
+ ___      _ _                    _             _  _                _
 | _ ) ___(_) |___ _ _ _ __  __ _| |_____ _ _  | || |___ _ __  ___| |__ _ _ _____ __ __
 | _ \/ _ \ | / -_) '_| '  \/ _` | / / -_) '_| | __ / _ \ '  \/ -_) '_ \ '_/ -_) V  V /
 |___/\___/_|_\___|_| |_|_|_\__,_|_\_\___|_|   |_||_\___/_|_|_\___|_.__/_| \___|\_/\_/
 BMHB_TEXT
-)
 
-BLUE='\033[0;34m'
-NC='\033[0m'
-
-echo -e "${BLUE}${BMHB_LOGO}${NC}\n"
+echo -e "${NC}\n"
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd)"
 cd $SCRIPT_DIR
@@ -74,9 +75,9 @@ class Boilermaker < Formula
   end
 
   test do
-    assert_equal "boilermaker_cli #{version.delete_prefix('v')}\n", shell_output("'#{bin}/boil' -V")
+    assert_equal "boilermaker #{version.delete_prefix('v')}\n", shell_output("'#{bin}/boil' -V")
   end
 end
 EOF
 
-echo "Successfully generated boilermaker.rb for version ${VERSION}!"
+echo -e "Successfully generated boilermaker.rb for version ${BLUE}${VERSION}${NC}"
